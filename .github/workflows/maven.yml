@@ -23,10 +23,10 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
  
- security-checks:
-  runs-on: ubuntu-latest
+  security-checks:
+   runs-on: ubuntu-latest
 
-  steps:
+   steps:
     - uses: actions/checkout@v4
 
     - name: Run Trivy
@@ -53,4 +53,5 @@ jobs:
           gitleaks-report.json
 
 
+  
   
